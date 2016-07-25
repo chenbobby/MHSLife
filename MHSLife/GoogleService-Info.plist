@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>623062349464-6f1o804opplrki7kocobf3ahmmb92dmq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.623062349464-6f1o804opplrki7kocobf3ahmmb92dmq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB8GYXaYVTbkubeZ4RzWAS23nbhnBoj0kA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>623062349464</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.bobchen.MHSLife</string>
+	<key>PROJECT_ID</key>
+	<string>mhs-life</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mhs-life.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:623062349464:ios:de7a7413c2241019</string>
+	<key>DATABASE_URL</key>
+	<string>https://mhs-life.firebaseio.com</string>
+</dict>
+</plist>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43B6A79FE3C5A29C55AE6C9A /* Pods_MHSLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18F10B14D23FC0D356EEC34 /* Pods_MHSLife.framework */; };
 		84CD6B551D459E6800696DE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD6B541D459E6800696DE7 /* AppDelegate.swift */; };
 		84CD6B571D459E6800696DE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD6B561D459E6800696DE7 /* ViewController.swift */; };
 		84CD6B5A1D459E6800696DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CD6B581D459E6800696DE7 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		84CD6B621D459E6800696DE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CD6B601D459E6800696DE7 /* LaunchScreen.storyboard */; };
 		84CD6B6D1D459E6900696DE7 /* MHSLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD6B6C1D459E6900696DE7 /* MHSLifeTests.swift */; };
 		84CD6B781D459E6900696DE7 /* MHSLifeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD6B771D459E6900696DE7 /* MHSLifeUITests.swift */; };
+		84CD6B861D45A10800696DE7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84CD6B851D45A10800696DE7 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2509E68B183C90AB41EBFEB7 /* Pods-MHSLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHSLife.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MHSLife/Pods-MHSLife.debug.xcconfig"; sourceTree = "<group>"; };
+		546229BD17D92126D34F6C65 /* Pods-MHSLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHSLife.release.xcconfig"; path = "Pods/Target Support Files/Pods-MHSLife/Pods-MHSLife.release.xcconfig"; sourceTree = "<group>"; };
 		84CD6B511D459E6500696DE7 /* MHSLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHSLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CD6B541D459E6800696DE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84CD6B561D459E6800696DE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +53,8 @@
 		84CD6B731D459E6900696DE7 /* MHSLifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MHSLifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CD6B771D459E6900696DE7 /* MHSLifeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHSLifeUITests.swift; sourceTree = "<group>"; };
 		84CD6B791D459E6900696DE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CD6B851D45A10800696DE7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C18F10B14D23FC0D356EEC34 /* Pods_MHSLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MHSLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B6A79FE3C5A29C55AE6C9A /* Pods_MHSLife.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A92CA4F65739EEC82B87E6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2509E68B183C90AB41EBFEB7 /* Pods-MHSLife.debug.xcconfig */,
+				546229BD17D92126D34F6C65 /* Pods-MHSLife.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		84CD6B481D459E6400696DE7 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +99,8 @@
 				84CD6B6B1D459E6900696DE7 /* MHSLifeTests */,
 				84CD6B761D459E6900696DE7 /* MHSLifeUITests */,
 				84CD6B521D459E6500696DE7 /* Products */,
+				0A92CA4F65739EEC82B87E6E /* Pods */,
+				C1846C34251663A68EEB22AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +117,7 @@
 		84CD6B531D459E6700696DE7 /* MHSLife */ = {
 			isa = PBXGroup;
 			children = (
+				84CD6B851D45A10800696DE7 /* GoogleService-Info.plist */,
 				84CD6B541D459E6800696DE7 /* AppDelegate.swift */,
 				84CD6B561D459E6800696DE7 /* ViewController.swift */,
 				84CD6B581D459E6800696DE7 /* Main.storyboard */,
@@ -128,6 +147,14 @@
 			path = MHSLifeUITests;
 			sourceTree = "<group>";
 		};
+		C1846C34251663A68EEB22AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C18F10B14D23FC0D356EEC34 /* Pods_MHSLife.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84CD6B7C1D459E6900696DE7 /* Build configuration list for PBXNativeTarget "MHSLife" */;
 			buildPhases = (
+				E8F77F2A4D15C95B1CE7FD1C /* [CP] Check Pods Manifest.lock */,
 				84CD6B4D1D459E6500696DE7 /* Sources */,
 				84CD6B4E1D459E6500696DE7 /* Frameworks */,
 				84CD6B4F1D459E6500696DE7 /* Resources */,
+				85277ECA8ECFA46049723063 /* [CP] Embed Pods Frameworks */,
+				5BF76F1BE39A4FBFDCC50773 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +226,15 @@
 				TargetAttributes = {
 					84CD6B501D459E6500696DE7 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = B4KEJB9JE8;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					84CD6B671D459E6900696DE7 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -233,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84CD6B621D459E6800696DE7 /* LaunchScreen.storyboard in Resources */,
+				84CD6B861D45A10800696DE7 /* GoogleService-Info.plist in Resources */,
 				84CD6B5F1D459E6800696DE7 /* Assets.xcassets in Resources */,
 				84CD6B5A1D459E6800696DE7 /* Main.storyboard in Resources */,
 			);
@@ -253,6 +293,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5BF76F1BE39A4FBFDCC50773 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MHSLife/Pods-MHSLife-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85277ECA8ECFA46049723063 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MHSLife/Pods-MHSLife-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8F77F2A4D15C95B1CE7FD1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84CD6B4D1D459E6500696DE7 /* Sources */ = {
@@ -401,6 +489,7 @@
 		};
 		84CD6B7D1D459E6900696DE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2509E68B183C90AB41EBFEB7 /* Pods-MHSLife.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MHSLife/Info.plist;
@@ -412,6 +501,7 @@
 		};
 		84CD6B7E1D459E6900696DE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 546229BD17D92126D34F6C65 /* Pods-MHSLife.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MHSLife/Info.plist;
@@ -486,6 +576,7 @@
 				84CD6B7E1D459E6900696DE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84CD6B7F1D459E6900696DE7 /* Build configuration list for PBXNativeTarget "MHSLifeTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +585,7 @@
 				84CD6B811D459E6900696DE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84CD6B821D459E6900696DE7 /* Build configuration list for PBXNativeTarget "MHSLifeUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +594,7 @@
 				84CD6B841D459E6900696DE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

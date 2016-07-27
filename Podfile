@@ -8,6 +8,7 @@ target 'MHSLife' do
   # Firebase
 pod ‘Firebase’
 pod ‘Firebase/Messaging’
-
+pod ‘Firebase/Auth’
+pod ‘GoogleSignIn’
 
 end

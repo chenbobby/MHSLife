@@ -11,6 +11,12 @@
 		84263FFC1D4885DC00DDBAD8 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84263FFB1D4885DC00DDBAD8 /* RegisterController.swift */; };
 		84263FFD1D4885DC00DDBAD8 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84263FFB1D4885DC00DDBAD8 /* RegisterController.swift */; };
 		84263FFE1D4885DC00DDBAD8 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84263FFB1D4885DC00DDBAD8 /* RegisterController.swift */; };
+		842640001D49E6E400DDBAD8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84263FFF1D49E6E400DDBAD8 /* HomeController.swift */; };
+		842640011D49E6E400DDBAD8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84263FFF1D49E6E400DDBAD8 /* HomeController.swift */; };
+		842640021D49E6E400DDBAD8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84263FFF1D49E6E400DDBAD8 /* HomeController.swift */; };
+		842640041D49E85200DDBAD8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842640031D49E85200DDBAD8 /* UserModel.swift */; };
+		842640051D49E85200DDBAD8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842640031D49E85200DDBAD8 /* UserModel.swift */; };
+		842640061D49E85200DDBAD8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842640031D49E85200DDBAD8 /* UserModel.swift */; };
 		84CD6B551D459E6800696DE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD6B541D459E6800696DE7 /* AppDelegate.swift */; };
 		84CD6B571D459E6800696DE7 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD6B561D459E6800696DE7 /* LoginController.swift */; };
 		84CD6B5A1D459E6800696DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CD6B581D459E6800696DE7 /* Main.storyboard */; };
@@ -44,6 +50,8 @@
 		546229BD17D92126D34F6C65 /* Pods-MHSLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHSLife.release.xcconfig"; path = "Pods/Target Support Files/Pods-MHSLife/Pods-MHSLife.release.xcconfig"; sourceTree = "<group>"; };
 		84263FEE1D487E6B00DDBAD8 /* MHSLife-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MHSLife-Bridging-Header.h"; sourceTree = "<group>"; };
 		84263FFB1D4885DC00DDBAD8 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		84263FFF1D49E6E400DDBAD8 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		842640031D49E85200DDBAD8 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		84CD6B511D459E6500696DE7 /* MHSLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHSLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CD6B541D459E6800696DE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84CD6B561D459E6800696DE7 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -97,6 +105,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		842640071D49F55B00DDBAD8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				842640031D49E85200DDBAD8 /* UserModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		84CD6B481D459E6400696DE7 = {
 			isa = PBXGroup;
 			children = (
@@ -122,10 +138,12 @@
 		84CD6B531D459E6700696DE7 /* MHSLife */ = {
 			isa = PBXGroup;
 			children = (
+				842640071D49F55B00DDBAD8 /* Models */,
 				84CD6B851D45A10800696DE7 /* GoogleService-Info.plist */,
 				84CD6B541D459E6800696DE7 /* AppDelegate.swift */,
 				84CD6B561D459E6800696DE7 /* LoginController.swift */,
 				84263FFB1D4885DC00DDBAD8 /* RegisterController.swift */,
+				84263FFF1D49E6E400DDBAD8 /* HomeController.swift */,
 				84CD6B581D459E6800696DE7 /* Main.storyboard */,
 				84CD6B5E1D459E6800696DE7 /* Assets.xcassets */,
 				84CD6B601D459E6800696DE7 /* LaunchScreen.storyboard */,
@@ -358,6 +376,8 @@
 				84CD6B571D459E6800696DE7 /* LoginController.swift in Sources */,
 				84CD6B5D1D459E6800696DE7 /* MHSLife.xcdatamodeld in Sources */,
 				84CD6B551D459E6800696DE7 /* AppDelegate.swift in Sources */,
+				842640041D49E85200DDBAD8 /* UserModel.swift in Sources */,
+				842640001D49E6E400DDBAD8 /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +387,8 @@
 			files = (
 				84263FFD1D4885DC00DDBAD8 /* RegisterController.swift in Sources */,
 				84CD6B6D1D459E6900696DE7 /* MHSLifeTests.swift in Sources */,
+				842640051D49E85200DDBAD8 /* UserModel.swift in Sources */,
+				842640011D49E6E400DDBAD8 /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +398,8 @@
 			files = (
 				84263FFE1D4885DC00DDBAD8 /* RegisterController.swift in Sources */,
 				84CD6B781D459E6900696DE7 /* MHSLifeUITests.swift in Sources */,
+				842640061D49E85200DDBAD8 /* UserModel.swift in Sources */,
+				842640021D49E6E400DDBAD8 /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

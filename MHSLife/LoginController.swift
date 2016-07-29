@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import GoogleSignIn
+import TwitterKit
 
 class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
     
@@ -18,6 +19,8 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    @IBOutlet weak var twitterLoginButton: UIView!
+
 
     
     override func viewDidLoad() {
@@ -27,6 +30,37 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
+        
+        // Twitter
+        let logInButton = TWTRLogInButton(logInCompletion: {
+            session, error in
+            
+            if(session != nil){
+                let authToken = session?.authToken
+                let authTokenSecret = session?.authTokenSecret
+                
+                let cred = FIRTwitterAuthProvider.credentialWithToken(authToken!, secret: authTokenSecret!)
+                FIRAuth.auth()?.signInWithCredential(cred, completion: {
+                    (user, error) in
+                    
+                    if(error != nil){
+                        print(error!.localizedDescription)
+                        return
+                    }
+                    
+                    print("User logged in with Twitter" + user!.uid)
+                    self.userId = user!.uid
+                    
+                    self.performSegueWithIdentifier("login", sender: nil)
+                })
+            }else{
+                if(error != nil){
+                    print(error!.localizedDescription)
+                }
+            }
+        })
+        
+        twitterLoginButton.addSubview(logInButton)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -43,7 +77,7 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
         FIRAuth.auth()?.signInWithEmail(emailField.text!, password: passwordField.text!, completion: {
             (user, error) in
             
-            if error != nil{
+            if(error != nil){
                 print(error!.localizedDescription)
                 self.passwordField.text = ""
                 return
@@ -89,6 +123,8 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
         
         try! FIRAuth.auth()!.signOut()
     }
+    
+    // MARK: - Twitter
     
     
     // MARK: - Hide Navbar

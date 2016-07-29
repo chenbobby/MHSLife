@@ -17,6 +17,12 @@
 		842640041D49E85200DDBAD8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842640031D49E85200DDBAD8 /* UserModel.swift */; };
 		842640051D49E85200DDBAD8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842640031D49E85200DDBAD8 /* UserModel.swift */; };
 		842640061D49E85200DDBAD8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842640031D49E85200DDBAD8 /* UserModel.swift */; };
+		8426400B1D4AD06300DDBAD8 /* Sketch College.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426400A1D4AD06300DDBAD8 /* Sketch College.ttf */; };
+		8426400C1D4AD06300DDBAD8 /* Sketch College.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426400A1D4AD06300DDBAD8 /* Sketch College.ttf */; };
+		8426400D1D4AD06300DDBAD8 /* Sketch College.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426400A1D4AD06300DDBAD8 /* Sketch College.ttf */; };
+		8426400F1D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */; };
+		842640101D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */; };
+		842640111D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */; };
 		84CD6B551D459E6800696DE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD6B541D459E6800696DE7 /* AppDelegate.swift */; };
 		84CD6B571D459E6800696DE7 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD6B561D459E6800696DE7 /* LoginController.swift */; };
 		84CD6B5A1D459E6800696DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CD6B581D459E6800696DE7 /* Main.storyboard */; };
@@ -52,6 +58,8 @@
 		84263FFB1D4885DC00DDBAD8 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		84263FFF1D49E6E400DDBAD8 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		842640031D49E85200DDBAD8 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		8426400A1D4AD06300DDBAD8 /* Sketch College.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sketch College.ttf"; sourceTree = "<group>"; };
+		8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KGDefyingGravity.ttf; sourceTree = "<group>"; };
 		84CD6B511D459E6500696DE7 /* MHSLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHSLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CD6B541D459E6800696DE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84CD6B561D459E6800696DE7 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -113,6 +121,25 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		842640081D4AB04600DDBAD8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84CD6B561D459E6800696DE7 /* LoginController.swift */,
+				84263FFB1D4885DC00DDBAD8 /* RegisterController.swift */,
+				84263FFF1D49E6E400DDBAD8 /* HomeController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		842640091D4AD03500DDBAD8 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */,
+				8426400A1D4AD06300DDBAD8 /* Sketch College.ttf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
 		84CD6B481D459E6400696DE7 = {
 			isa = PBXGroup;
 			children = (
@@ -138,12 +165,11 @@
 		84CD6B531D459E6700696DE7 /* MHSLife */ = {
 			isa = PBXGroup;
 			children = (
+				842640091D4AD03500DDBAD8 /* fonts */,
+				842640081D4AB04600DDBAD8 /* Controllers */,
 				842640071D49F55B00DDBAD8 /* Models */,
 				84CD6B851D45A10800696DE7 /* GoogleService-Info.plist */,
 				84CD6B541D459E6800696DE7 /* AppDelegate.swift */,
-				84CD6B561D459E6800696DE7 /* LoginController.swift */,
-				84263FFB1D4885DC00DDBAD8 /* RegisterController.swift */,
-				84263FFF1D49E6E400DDBAD8 /* HomeController.swift */,
 				84CD6B581D459E6800696DE7 /* Main.storyboard */,
 				84CD6B5E1D459E6800696DE7 /* Assets.xcassets */,
 				84CD6B601D459E6800696DE7 /* LaunchScreen.storyboard */,
@@ -296,10 +322,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8426400F1D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */,
 				84CD6B621D459E6800696DE7 /* LaunchScreen.storyboard in Resources */,
 				84CD6B861D45A10800696DE7 /* GoogleService-Info.plist in Resources */,
 				84CD6B5F1D459E6800696DE7 /* Assets.xcassets in Resources */,
 				84CD6B5A1D459E6800696DE7 /* Main.storyboard in Resources */,
+				8426400B1D4AD06300DDBAD8 /* Sketch College.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +335,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842640101D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */,
+				8426400C1D4AD06300DDBAD8 /* Sketch College.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +344,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842640111D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */,
+				8426400D1D4AD06300DDBAD8 /* Sketch College.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

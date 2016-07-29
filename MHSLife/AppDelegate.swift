@@ -11,6 +11,9 @@ import CoreData
 import Firebase
 import FirebaseMessaging
 import GoogleSignIn
+import Fabric
+import TwitterCore
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        Twitter.sharedInstance().startWithConsumerKey("1YrTfiAJxr0AID9pQXQS5K1L4", consumerSecret: "7OVNPAJwXIbMGDKzegFPjfzgp9Jvs5mzDkXuOBMNeO9gKDZ6RW")
+        Fabric.with([Twitter.self])
         
         FIRApp.configure()
         

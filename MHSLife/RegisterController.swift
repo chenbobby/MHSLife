@@ -13,6 +13,10 @@ import FirebaseAuth
 
 class RegisterController: UIViewController {
     
+    
+    @IBAction func goToLogin(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil);
+    }
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!

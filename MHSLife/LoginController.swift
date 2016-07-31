@@ -18,8 +18,6 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    
-    @IBOutlet weak var twitterLoginButton: UIView!
 
 
     
@@ -60,15 +58,19 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
             }
         })
         
-        twitterLoginButton.addSubview(logInButton)
+        logInButton.center = CGPoint(x: 160.0, y: 350.0)
+        self.view.addSubview(logInButton)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "login"){
 
             self.passwordField.text = ""
-            let destinationVC = segue.destinationViewController as! HomeController
-            destinationVC.userUID = self.userId
+            let destinationTBC = segue.destinationViewController as! UITabBarController
+            let destinationVC1 = destinationTBC.viewControllers![0] as! HomeController
+            let destinationVC2 = destinationTBC.viewControllers![1] as! CalendarController
+            destinationVC1.userUID = self.userId
+            destinationVC2.userUID = self.userId
         }
     }
     

@@ -15,12 +15,12 @@ class HomeController: UIViewController {
     var userUID : String!
     var user : User!
     
-    @IBOutlet weak var helloLabel: UILabel!
-    @IBAction func logoutButton(sender: AnyObject) {
+    @IBAction func logout(sender: AnyObject) {
         try! FIRAuth.auth()!.signOut()
         print("User logged out")
-        self.navigationController?.popViewControllerAnimated(true)
+        self.dismissViewControllerAnimated(true, completion: nil);
     }
+    @IBOutlet weak var helloLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +40,7 @@ class HomeController: UIViewController {
         })
         
     }
+
     
     // MARK: - Hide Navbar
     override func viewWillAppear(animated: Bool) {

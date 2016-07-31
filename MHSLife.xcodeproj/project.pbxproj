@@ -23,6 +23,9 @@
 		8426400F1D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */; };
 		842640101D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */; };
 		842640111D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */; };
+		84900E841D4DEB880056D174 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84900E831D4DEB880056D174 /* CalendarController.swift */; };
+		84900E851D4DEB880056D174 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84900E831D4DEB880056D174 /* CalendarController.swift */; };
+		84900E861D4DEB880056D174 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84900E831D4DEB880056D174 /* CalendarController.swift */; };
 		84CD6B551D459E6800696DE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD6B541D459E6800696DE7 /* AppDelegate.swift */; };
 		84CD6B571D459E6800696DE7 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD6B561D459E6800696DE7 /* LoginController.swift */; };
 		84CD6B5A1D459E6800696DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CD6B581D459E6800696DE7 /* Main.storyboard */; };
@@ -60,6 +63,7 @@
 		842640031D49E85200DDBAD8 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8426400A1D4AD06300DDBAD8 /* Sketch College.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sketch College.ttf"; sourceTree = "<group>"; };
 		8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KGDefyingGravity.ttf; sourceTree = "<group>"; };
+		84900E831D4DEB880056D174 /* CalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
 		84CD6B511D459E6500696DE7 /* MHSLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHSLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CD6B541D459E6800696DE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84CD6B561D459E6800696DE7 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 				84CD6B561D459E6800696DE7 /* LoginController.swift */,
 				84263FFB1D4885DC00DDBAD8 /* RegisterController.swift */,
 				84263FFF1D49E6E400DDBAD8 /* HomeController.swift */,
+				84900E831D4DEB880056D174 /* CalendarController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -407,6 +412,7 @@
 				84263FFC1D4885DC00DDBAD8 /* RegisterController.swift in Sources */,
 				84CD6B571D459E6800696DE7 /* LoginController.swift in Sources */,
 				84CD6B5D1D459E6800696DE7 /* MHSLife.xcdatamodeld in Sources */,
+				84900E841D4DEB880056D174 /* CalendarController.swift in Sources */,
 				84CD6B551D459E6800696DE7 /* AppDelegate.swift in Sources */,
 				842640041D49E85200DDBAD8 /* UserModel.swift in Sources */,
 				842640001D49E6E400DDBAD8 /* HomeController.swift in Sources */,
@@ -419,6 +425,7 @@
 			files = (
 				84263FFD1D4885DC00DDBAD8 /* RegisterController.swift in Sources */,
 				84CD6B6D1D459E6900696DE7 /* MHSLifeTests.swift in Sources */,
+				84900E851D4DEB880056D174 /* CalendarController.swift in Sources */,
 				842640051D49E85200DDBAD8 /* UserModel.swift in Sources */,
 				842640011D49E6E400DDBAD8 /* HomeController.swift in Sources */,
 			);
@@ -430,6 +437,7 @@
 			files = (
 				84263FFE1D4885DC00DDBAD8 /* RegisterController.swift in Sources */,
 				84CD6B781D459E6900696DE7 /* MHSLifeUITests.swift in Sources */,
+				84900E861D4DEB880056D174 /* CalendarController.swift in Sources */,
 				842640061D49E85200DDBAD8 /* UserModel.swift in Sources */,
 				842640021D49E6E400DDBAD8 /* HomeController.swift in Sources */,
 			);

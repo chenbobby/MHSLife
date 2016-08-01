@@ -14,10 +14,9 @@ import TwitterKit
 
 class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
     
-    var userId : String = ""
-    
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var twitterButton: TWTRLogInButton!
 
 
     
@@ -30,47 +29,19 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
         GIDSignIn.sharedInstance().uiDelegate = self
         
         // Twitter
-        let logInButton = TWTRLogInButton(logInCompletion: {
-            session, error in
-            
-            if(session != nil){
-                let authToken = session?.authToken
-                let authTokenSecret = session?.authTokenSecret
-                
-                let cred = FIRTwitterAuthProvider.credentialWithToken(authToken!, secret: authTokenSecret!)
-                FIRAuth.auth()?.signInWithCredential(cred, completion: {
-                    (user, error) in
-                    
-                    if(error != nil){
-                        print(error!.localizedDescription)
-                        return
-                    }
-                    
-                    print("User logged in with Twitter" + user!.uid)
-                    self.userId = user!.uid
-                    
-                    self.performSegueWithIdentifier("login", sender: nil)
-                })
-            }else{
-                if(error != nil){
-                    print(error!.localizedDescription)
-                }
-            }
-        })
-        
-        logInButton.center = CGPoint(x: 160.0, y: 350.0)
-        self.view.addSubview(logInButton)
+        setupTwitterButton()
+
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "login"){
 
             self.passwordField.text = ""
-            let destinationTBC = segue.destinationViewController as! UITabBarController
-            let destinationVC1 = destinationTBC.viewControllers![0] as! HomeController
-            let destinationVC2 = destinationTBC.viewControllers![1] as! CalendarController
-            destinationVC1.userUID = self.userId
-            destinationVC2.userUID = self.userId
+//            let destinationTBC = segue.destinationViewController as! UITabBarController
+//            let destinationVC1 = destinationTBC.viewControllers![0] as! HomeController
+//            let destinationVC2 = destinationTBC.viewControllers![1] as! CalendarController
+//            destinationVC1.userUID = User.UID
+//            destinationVC2.userUID = User.UID
         }
     }
     
@@ -85,8 +56,8 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
                 return
             }
             
-            print("User logged in" + user!.uid)
-            self.userId = user!.uid
+            User.UID = user!.uid
+            print("User logged in with Email: " + User.UID)
             
             self.performSegueWithIdentifier("login", sender: nil)
         })
@@ -110,8 +81,8 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
                 return
             }
             
-            print("User logged in with Google" + user!.uid)
-            self.userId = user!.uid
+            User.UID = user!.uid
+            print("User logged in with Google: " + User.UID)
             
             self.performSegueWithIdentifier("login", sender: nil)
         })
@@ -127,7 +98,36 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
     }
     
     // MARK: - Twitter
-    
+    func setupTwitterButton() {
+        twitterButton = TWTRLogInButton(logInCompletion: {
+            session, error in
+            
+            if(session != nil){
+                let authToken = session?.authToken
+                let authTokenSecret = session?.authTokenSecret
+                
+                let cred = FIRTwitterAuthProvider.credentialWithToken(authToken!, secret: authTokenSecret!)
+                FIRAuth.auth()?.signInWithCredential(cred, completion: {
+                    (user, error) in
+                    
+                    if(error != nil){
+                        print(error!.localizedDescription)
+                        return
+                    }
+                    
+                    User.UID = user!.uid
+                    print("User logged in with Twitter: " + User.UID)
+                    
+                    self.performSegueWithIdentifier("login", sender: nil)
+                })
+            }else{
+                if(error != nil){
+                    print(error!.localizedDescription)
+                }
+            }
+        })
+        
+    }
     
     // MARK: - Hide Navbar
     override func viewWillAppear(animated: Bool) {

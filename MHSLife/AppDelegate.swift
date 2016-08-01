@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
         
         Twitter.sharedInstance().startWithConsumerKey("1YrTfiAJxr0AID9pQXQS5K1L4", consumerSecret: "7OVNPAJwXIbMGDKzegFPjfzgp9Jvs5mzDkXuOBMNeO9gKDZ6RW")
         Fabric.with([Twitter.self])
@@ -33,6 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let notificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
         application.registerForRemoteNotifications()
         application.registerUserNotificationSettings(notificationSettings)
+        
+        let cancelButtonAttributes: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        UIBarButtonItem.appearance().setTitleTextAttributes(cancelButtonAttributes as? [String : AnyObject], forState: UIControlState.Normal)
         
         return true
     }

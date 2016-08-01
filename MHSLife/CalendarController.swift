@@ -18,13 +18,4 @@ class CalendarController: UIViewController {
         super.viewDidLoad()
     }
 
-    // MARK: - Hide Navbar
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBarHidden = true
-    }
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.navigationBarHidden = false
-    }
 }

@@ -23,6 +23,21 @@
 		8426400F1D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */; };
 		842640101D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */; };
 		842640111D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */; };
+		845129241D4EA709000DD6CC /* GroupSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845129231D4EA709000DD6CC /* GroupSearchController.swift */; };
+		845129251D4EA709000DD6CC /* GroupSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845129231D4EA709000DD6CC /* GroupSearchController.swift */; };
+		845129261D4EA709000DD6CC /* GroupSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845129231D4EA709000DD6CC /* GroupSearchController.swift */; };
+		845129281D4EA765000DD6CC /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845129271D4EA765000DD6CC /* GroupModel.swift */; };
+		845129291D4EA765000DD6CC /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845129271D4EA765000DD6CC /* GroupModel.swift */; };
+		8451292A1D4EA765000DD6CC /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845129271D4EA765000DD6CC /* GroupModel.swift */; };
+		8451292E1D4EB101000DD6CC /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451292C1D4EB101000DD6CC /* GroupCell.swift */; };
+		8451292F1D4EB101000DD6CC /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451292C1D4EB101000DD6CC /* GroupCell.swift */; };
+		845129301D4EB101000DD6CC /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451292C1D4EB101000DD6CC /* GroupCell.swift */; };
+		845129311D4EB101000DD6CC /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8451292D1D4EB101000DD6CC /* GroupCell.xib */; };
+		845129321D4EB101000DD6CC /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8451292D1D4EB101000DD6CC /* GroupCell.xib */; };
+		845129331D4EB101000DD6CC /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8451292D1D4EB101000DD6CC /* GroupCell.xib */; };
+		8451293A1D4F08DE000DD6CC /* FavoriteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845129391D4F08DE000DD6CC /* FavoriteControl.swift */; };
+		8451293B1D4F08DE000DD6CC /* FavoriteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845129391D4F08DE000DD6CC /* FavoriteControl.swift */; };
+		8451293C1D4F08DE000DD6CC /* FavoriteControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845129391D4F08DE000DD6CC /* FavoriteControl.swift */; };
 		84900E841D4DEB880056D174 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84900E831D4DEB880056D174 /* CalendarController.swift */; };
 		84900E851D4DEB880056D174 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84900E831D4DEB880056D174 /* CalendarController.swift */; };
 		84900E861D4DEB880056D174 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84900E831D4DEB880056D174 /* CalendarController.swift */; };
@@ -63,6 +78,11 @@
 		842640031D49E85200DDBAD8 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8426400A1D4AD06300DDBAD8 /* Sketch College.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sketch College.ttf"; sourceTree = "<group>"; };
 		8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KGDefyingGravity.ttf; sourceTree = "<group>"; };
+		845129231D4EA709000DD6CC /* GroupSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupSearchController.swift; sourceTree = "<group>"; };
+		845129271D4EA765000DD6CC /* GroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
+		8451292C1D4EB101000DD6CC /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		8451292D1D4EB101000DD6CC /* GroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupCell.xib; sourceTree = "<group>"; };
+		845129391D4F08DE000DD6CC /* FavoriteControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteControl.swift; sourceTree = "<group>"; };
 		84900E831D4DEB880056D174 /* CalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
 		84CD6B511D459E6500696DE7 /* MHSLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHSLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CD6B541D459E6800696DE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				842640031D49E85200DDBAD8 /* UserModel.swift */,
+				845129271D4EA765000DD6CC /* GroupModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -132,6 +153,7 @@
 				84263FFB1D4885DC00DDBAD8 /* RegisterController.swift */,
 				84263FFF1D49E6E400DDBAD8 /* HomeController.swift */,
 				84900E831D4DEB880056D174 /* CalendarController.swift */,
+				845129231D4EA709000DD6CC /* GroupSearchController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -143,6 +165,23 @@
 				8426400A1D4AD06300DDBAD8 /* Sketch College.ttf */,
 			);
 			name = fonts;
+			sourceTree = "<group>";
+		};
+		8451292B1D4EB08F000DD6CC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8451292C1D4EB101000DD6CC /* GroupCell.swift */,
+				8451292D1D4EB101000DD6CC /* GroupCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		845129341D4F062B000DD6CC /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				845129391D4F08DE000DD6CC /* FavoriteControl.swift */,
+			);
+			name = Buttons;
 			sourceTree = "<group>";
 		};
 		84CD6B481D459E6400696DE7 = {
@@ -170,6 +209,8 @@
 		84CD6B531D459E6700696DE7 /* MHSLife */ = {
 			isa = PBXGroup;
 			children = (
+				845129341D4F062B000DD6CC /* Buttons */,
+				8451292B1D4EB08F000DD6CC /* Cells */,
 				842640091D4AD03500DDBAD8 /* fonts */,
 				842640081D4AB04600DDBAD8 /* Controllers */,
 				842640071D49F55B00DDBAD8 /* Models */,
@@ -332,6 +373,7 @@
 				84CD6B861D45A10800696DE7 /* GoogleService-Info.plist in Resources */,
 				84CD6B5F1D459E6800696DE7 /* Assets.xcassets in Resources */,
 				84CD6B5A1D459E6800696DE7 /* Main.storyboard in Resources */,
+				845129311D4EB101000DD6CC /* GroupCell.xib in Resources */,
 				8426400B1D4AD06300DDBAD8 /* Sketch College.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				842640101D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */,
+				845129321D4EB101000DD6CC /* GroupCell.xib in Resources */,
 				8426400C1D4AD06300DDBAD8 /* Sketch College.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				842640111D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */,
+				845129331D4EB101000DD6CC /* GroupCell.xib in Resources */,
 				8426400D1D4AD06300DDBAD8 /* Sketch College.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,10 +455,14 @@
 			files = (
 				84263FFC1D4885DC00DDBAD8 /* RegisterController.swift in Sources */,
 				84CD6B571D459E6800696DE7 /* LoginController.swift in Sources */,
+				845129281D4EA765000DD6CC /* GroupModel.swift in Sources */,
 				84CD6B5D1D459E6800696DE7 /* MHSLife.xcdatamodeld in Sources */,
 				84900E841D4DEB880056D174 /* CalendarController.swift in Sources */,
+				8451292E1D4EB101000DD6CC /* GroupCell.swift in Sources */,
 				84CD6B551D459E6800696DE7 /* AppDelegate.swift in Sources */,
+				845129241D4EA709000DD6CC /* GroupSearchController.swift in Sources */,
 				842640041D49E85200DDBAD8 /* UserModel.swift in Sources */,
+				8451293A1D4F08DE000DD6CC /* FavoriteControl.swift in Sources */,
 				842640001D49E6E400DDBAD8 /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,10 +472,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				84263FFD1D4885DC00DDBAD8 /* RegisterController.swift in Sources */,
+				845129291D4EA765000DD6CC /* GroupModel.swift in Sources */,
 				84CD6B6D1D459E6900696DE7 /* MHSLifeTests.swift in Sources */,
 				84900E851D4DEB880056D174 /* CalendarController.swift in Sources */,
 				842640051D49E85200DDBAD8 /* UserModel.swift in Sources */,
 				842640011D49E6E400DDBAD8 /* HomeController.swift in Sources */,
+				845129251D4EA709000DD6CC /* GroupSearchController.swift in Sources */,
+				8451292F1D4EB101000DD6CC /* GroupCell.swift in Sources */,
+				8451293B1D4F08DE000DD6CC /* FavoriteControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,10 +488,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				84263FFE1D4885DC00DDBAD8 /* RegisterController.swift in Sources */,
+				8451292A1D4EA765000DD6CC /* GroupModel.swift in Sources */,
 				84CD6B781D459E6900696DE7 /* MHSLifeUITests.swift in Sources */,
 				84900E861D4DEB880056D174 /* CalendarController.swift in Sources */,
 				842640061D49E85200DDBAD8 /* UserModel.swift in Sources */,
 				842640021D49E6E400DDBAD8 /* HomeController.swift in Sources */,
+				845129261D4EA709000DD6CC /* GroupSearchController.swift in Sources */,
+				845129301D4EB101000DD6CC /* GroupCell.swift in Sources */,
+				8451293C1D4F08DE000DD6CC /* FavoriteControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

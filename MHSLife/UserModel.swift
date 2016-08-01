@@ -9,6 +9,7 @@
 import Foundation
 
 struct User{
-    let name: String
-    let favorites: [String]
+    static var UID: String = ""
+    static var name: String = ""
+    static var favorites: [String] = []
 }

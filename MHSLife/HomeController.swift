@@ -12,9 +12,6 @@ import FirebaseDatabase
 
 class HomeController: UIViewController {
     
-    var userUID : String!
-    var user : User!
-    
     @IBAction func logout(sender: AnyObject) {
         try! FIRAuth.auth()!.signOut()
         print("User logged out")
@@ -26,7 +23,7 @@ class HomeController: UIViewController {
         super.viewDidLoad()
         var dataDict : [String : AnyObject] = [:]
         let ref = FIRDatabase.database().reference()
-        ref.child("users/" + self.userUID).observeEventType(.Value, withBlock: {
+        ref.child("users/" + User.UID).observeEventType(.Value, withBlock: {
             snapshot in
             
             if(!snapshot.exists()){
@@ -34,21 +31,12 @@ class HomeController: UIViewController {
             }else{
                 dataDict = snapshot.value as! [String : AnyObject]
             }
-            self.user = User(name: (dataDict["name"] != nil) ? dataDict["name"] as! String : "Charger", favorites: (dataDict["favorites"] != nil) ? dataDict["favorites"] as! [String] : [])
-            print(self.user)
-            self.helloLabel.text = "Hello " + self.user.name
+
+            User.name = (dataDict["name"] != nil) ? dataDict["name"] as! String : "Charger"
+            User.favorites = (dataDict["favorites"] != nil) ? dataDict["favorites"] as! [String] : []
+            self.helloLabel.text = "Hello " + User.name
         })
         
     }
 
-    
-    // MARK: - Hide Navbar
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBarHidden = true
-    }
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.navigationBarHidden = false
-    }
 }

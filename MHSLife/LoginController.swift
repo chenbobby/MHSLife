@@ -30,18 +30,14 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
         
         // Twitter
         setupTwitterButton()
+        
 
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "login"){
-
             self.passwordField.text = ""
-//            let destinationTBC = segue.destinationViewController as! UITabBarController
-//            let destinationVC1 = destinationTBC.viewControllers![0] as! HomeController
-//            let destinationVC2 = destinationTBC.viewControllers![1] as! CalendarController
-//            destinationVC1.userUID = User.UID
-//            destinationVC2.userUID = User.UID
+            // TODO: Setup Activity Indicator
         }
     }
     
@@ -99,8 +95,8 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
     
     // MARK: - Twitter
     func setupTwitterButton() {
-        twitterButton = TWTRLogInButton(logInCompletion: {
-            session, error in
+        self.twitterButton.logInCompletion = {
+            (session, error) in
             
             if(session != nil){
                 let authToken = session?.authToken
@@ -125,8 +121,7 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
                     print(error!.localizedDescription)
                 }
             }
-        })
-        
+        }
     }
     
     // MARK: - Hide Navbar

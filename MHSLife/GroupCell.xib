@@ -47,6 +47,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="descriptionLabel" destination="ZTw-wY-Yxy" id="Nyf-au-sbh"/>
+                <outlet property="favoriteControlView" destination="ygS-X8-Oh7" id="HD3-F6-gOr"/>
                 <outlet property="nameLabel" destination="fzh-XQ-yT3" id="Sp7-ae-T1D"/>
             </connections>
             <point key="canvasLocation" x="610" y="469.5"/>

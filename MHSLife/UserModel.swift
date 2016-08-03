@@ -7,9 +7,48 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseDatabase
 
 struct User{
     static var UID: String = ""
-    static var name: String = ""
     static var favorites: [String] = []
+    
+    static func toggleSubscription(groupName: String) {
+        let ref = FIRDatabase.database().reference()
+        if User.isFavorited(groupName){
+            ref.child("users/" + User.UID + "/" + groupName).removeValueWithCompletionBlock({
+                (error, ref) in
+                
+                if(error != nil){
+                    print("Problem Connecting to Database")
+                    print(error!.localizedDescription)
+                }else{
+                    print(groupName + " removed from favorites")
+                    FIRMessaging.messaging().unsubscribeFromTopic("/topics/" + groupName)
+                }
+                print(User.favorites)
+            })
+        }else{
+            User.favorites.append(groupName)
+            FIRMessaging.messaging().subscribeToTopic("/topics/" + groupName)
+            ref.child("users/" + User.UID).updateChildValues([groupName : true], withCompletionBlock: {
+                (error, ref) in
+                
+                if(error != nil){
+                    print("Problem Connecting to Database")
+                    print(error!.localizedDescription)
+                }else{
+                    print(groupName + " added to favorites")
+                    FIRMessaging.messaging().subscribeToTopic("/topics/" + groupName)
+                }
+                print(User.favorites)
+            })
+        }
+    }
+    
+    static func isFavorited(groupName: String) -> Bool {
+        return User.favorites.contains(groupName)
+    }
+    
 }

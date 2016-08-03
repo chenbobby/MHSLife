@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class FavoriteControl: UIView {
     
     var favorited: Bool!
+    var groupName: String!
     var button: UIButton!
     static var onImage: UIImage = UIImage(named: "Star Filled-25")!
     static var offImage: UIImage = UIImage(named: "Star-25")!
@@ -18,13 +21,10 @@ class FavoriteControl: UIView {
     // MARK: - Initialization
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.favorited = false
         
         button = UIButton(frame: CGRect(x: 0, y: 0, width: 35, height: 35))
-        self.setImage()
         button.addTarget(self, action: #selector(FavoriteControl.toggleFavorite(_:)), forControlEvents: .TouchDown)
         addSubview(button)
-        
     }
     
     override func intrinsicContentSize() -> CGSize {
@@ -32,9 +32,9 @@ class FavoriteControl: UIView {
     }
     
     func toggleFavorite(button: UIButton) {
+        User.toggleSubscription(self.groupName)
         self.favorited = !self.favorited
         self.setImage()
-        print("Favorited...")
     }
     
     func setImage() {

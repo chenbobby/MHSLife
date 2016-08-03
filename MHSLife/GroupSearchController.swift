@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
-class GroupSearchController: UIViewController, UITableViewDelegate {
+class GroupSearchController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     @IBAction func goToHome(sender: AnyObject) {
@@ -20,32 +22,28 @@ class GroupSearchController: UIViewController, UITableViewDelegate {
     let searchController = UISearchController(searchResultsController: nil)
     var filteredGroups = [Group]()
     var selectedIndexPath: NSIndexPath? = nil
-    
-    //MARK: - Helper Methods
-    func filterContentForSearchText(searchText: String) {
-        filteredGroups = groups.filter {
-            group in
-            return group.name.lowercaseString.containsString(searchText.lowercaseString)
-        }
-        
-        tableView.reloadData()
-    }
+
     
     // MARK: - View Setup
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        groups = [
-            Group(name:"Football", description: "Go Football!"),
-            Group(name:"Soccer", description: "We'll kick you balls!"),
-            Group(name:"Basketball", description: "Ball is life."),
-            Group(name:"Speech and Debate", description: "Stop Talking, Start Speaking!"),
-            Group(name:"Student Council", description: "Go Chargers!"),
-            Group(name:"Amnesty Internation", description: "Fight against Human Rights Violations"),
-            Group(name:"Tennis", description: "You just got served!"),
-            Group(name:"Choir", description: "La la la la laaaa!"),
-            Group(name:"Marching Band", description: "We are Marching Band!"),
-        ]
+        let ref = FIRDatabase.database().reference()
+        ref.child("groups/").observeEventType(.Value, withBlock: {
+            snapshot in
+            
+            if(!snapshot.exists()){
+                print("No Groups Exists")
+            }else{
+                print("Loading Groups")
+                let dataDict = snapshot.value as? [String : [String : AnyObject]]
+                print(dataDict)
+                for (group, info) in dataDict! {
+                    self.groups.append(Group(name: group, description: info["description"] as! String))
+                }
+            }
+            self.tableView.reloadData()
+        })
         
         searchController.searchResultsUpdater  = self
         searchController.dimsBackgroundDuringPresentation = false
@@ -67,16 +65,25 @@ class GroupSearchController: UIViewController, UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! GroupCell
         
-        let group : Group
+        let group: Group
         if (searchController.active && searchController.searchBar.text != "") {
             group = filteredGroups[indexPath.row]
         }else{
             group = groups[indexPath.row]
         }
         
+        // Init Cell Data
         cell.nameLabel!.text = group.name
         cell.descriptionLabel!.text = group.description
+        cell.favoriteControlView.groupName = group.name
+        cell.favoriteControlView.favorited = User.favorites.contains(group.name)
+        if(cell.favoriteControlView.favorited == true){
+            cell.favoriteControlView.button.setImage(FavoriteControl.onImage, forState: .Normal)
+        }else{
+            cell.favoriteControlView.button.setImage(FavoriteControl.offImage, forState: .Normal)
+        }
         cell.checkHeight()
+        
         return cell
     }
     
@@ -117,6 +124,21 @@ class GroupSearchController: UIViewController, UITableViewDelegate {
             tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
         }
         
+    }
+    
+    
+    //MARK: - Helper Methods
+    func filterContentForSearchText(searchText: String) {
+        filteredGroups = groups.filter {
+            group in
+            return group.name.lowercaseString.containsString(searchText.lowercaseString)
+        }
+        
+        tableView.reloadData()
+    }
+    
+    deinit {
+        searchController.view!.removeFromSuperview()
     }
 
 }

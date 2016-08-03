@@ -9,6 +9,7 @@ target 'MHSLife' do
 pod ‘Firebase’
 pod ‘Firebase/Database’
 pod ‘Firebase/Messaging’
+pod ‘Firebase/Core’
 pod ‘Firebase/Auth’
 pod ‘GoogleSignIn’
 pod ‘Fabric’

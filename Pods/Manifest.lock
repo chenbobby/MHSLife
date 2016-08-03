@@ -65,6 +65,7 @@ DEPENDENCIES:
   - Fabric
   - Firebase
   - Firebase/Auth
+  - Firebase/Core
   - Firebase/Database
   - Firebase/Messaging
   - GoogleSignIn
@@ -90,6 +91,6 @@ SPEC CHECKSUMS:
   TwitterCore: 817eae3e291fa4125b47789e26a4f6f024115c1f
   TwitterKit: 8a383da8d9c21b0423716381ea8bbfce20622d91
 
-PODFILE CHECKSUM: 060bfc40ecb4d51526b4c715e60fc7ab7c5381c3
+PODFILE CHECKSUM: e13ec07928b7d85618b0c08f9e8ef89f712fe294
 
 COCOAPODS: 1.0.1

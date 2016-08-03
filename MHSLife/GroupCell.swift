@@ -12,18 +12,9 @@ class GroupCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var favoriteControlView: FavoriteControl!
     class var defaultHeight: CGFloat { get { return 47 } }
     class var expandedHeight: CGFloat { get { return 75 } }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     func checkHeight() {
         descriptionLabel.hidden = (frame.size.height < GroupCell.expandedHeight)

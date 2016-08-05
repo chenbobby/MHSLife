@@ -228,7 +228,7 @@
                                 <rect key="frame" x="0.0" y="244" width="600" height="307"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="47" id="xnl-7G-4zV" customClass="favoriteGroupCell" customModule="MHSLife" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="47" id="xnl-7G-4zV">
                                         <rect key="frame" x="0.0" y="28" width="600" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xnl-7G-4zV" id="L7D-fi-kRL">
@@ -297,6 +297,22 @@
                     <view key="view" contentMode="scaleToFill" id="HvC-rD-nTa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gxe-Xs-87A" customClass="CVCalendarMenuView" customModule="CVCalendar">
+                                <rect key="frame" x="0.0" y="20" width="600" height="33"/>
+                                <color key="backgroundColor" red="0.094361059367656708" green="0.50242996215820312" blue="0.091644398868083954" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="menuViewDelegate" destination="HvC-rD-nTa" id="UJP-xf-CCc"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wqR-3L-6Yg" customClass="CVCalendarView" customModule="CVCalendar">
+                                <rect key="frame" x="0.0" y="61" width="600" height="369"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="calendarDelegate" destination="HvC-rD-nTa" id="h70-dA-UkF"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" image="Calendar 35" selectedImage="Calendar Filled-35" id="u2r-9k-wgj">
@@ -307,6 +323,10 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="calendarView" destination="wqR-3L-6Yg" id="zcr-yE-uTi"/>
+                        <outlet property="menuView" destination="gxe-Xs-87A" id="p3q-OI-fvJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDj-do-Tfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -508,36 +528,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZG8-TH-4zG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3144" y="-240"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="jc8-8V-eHw">
-            <objects>
-                <viewController id="5YT-9j-sWD" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="B3g-ab-h2y"/>
-                        <viewControllerLayoutGuide type="bottom" id="ca0-b6-fLj"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ko5-cN-HBU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3iR-G9-zYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="92N-22-0Ou">
-            <objects>
-                <viewController id="34g-8p-Ith" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VAC-47-GR1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="szn-5j-6Z5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>

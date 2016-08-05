@@ -14,5 +14,6 @@ pod ‘Firebase/Auth’
 pod ‘GoogleSignIn’
 pod ‘Fabric’
 pod ‘TwitterKit’
+pod ‘CVCalendar’, ‘~> 1.2.9’
 
 end

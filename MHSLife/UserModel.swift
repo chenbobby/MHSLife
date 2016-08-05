@@ -51,4 +51,12 @@ struct User{
         return User.favorites.contains(groupName)
     }
     
+    static func removeDefault(favorites: [String]) -> [String] {
+        var modifiedFavorites = favorites
+        if let index = modifiedFavorites.indexOf("mcclintock") {
+            modifiedFavorites.removeAtIndex(index)
+        }
+        return modifiedFavorites
+    }
+    
 }

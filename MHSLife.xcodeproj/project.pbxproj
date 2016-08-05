@@ -41,12 +41,6 @@
 		84900E841D4DEB880056D174 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84900E831D4DEB880056D174 /* CalendarController.swift */; };
 		84900E851D4DEB880056D174 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84900E831D4DEB880056D174 /* CalendarController.swift */; };
 		84900E861D4DEB880056D174 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84900E831D4DEB880056D174 /* CalendarController.swift */; };
-		84ACCB461D517E580062823F /* favoriteGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACCB441D517E570062823F /* favoriteGroupCell.swift */; };
-		84ACCB471D517E580062823F /* favoriteGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACCB441D517E570062823F /* favoriteGroupCell.swift */; };
-		84ACCB481D517E590062823F /* favoriteGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ACCB441D517E570062823F /* favoriteGroupCell.swift */; };
-		84ACCB491D517E590062823F /* favoriteGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84ACCB451D517E580062823F /* favoriteGroupCell.xib */; };
-		84ACCB4A1D517E590062823F /* favoriteGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84ACCB451D517E580062823F /* favoriteGroupCell.xib */; };
-		84ACCB4B1D517E590062823F /* favoriteGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84ACCB451D517E580062823F /* favoriteGroupCell.xib */; };
 		84CD6B551D459E6800696DE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD6B541D459E6800696DE7 /* AppDelegate.swift */; };
 		84CD6B571D459E6800696DE7 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD6B561D459E6800696DE7 /* LoginController.swift */; };
 		84CD6B5A1D459E6800696DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CD6B581D459E6800696DE7 /* Main.storyboard */; };
@@ -90,8 +84,6 @@
 		8451292D1D4EB101000DD6CC /* GroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupCell.xib; sourceTree = "<group>"; };
 		845129391D4F08DE000DD6CC /* FavoriteControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteControl.swift; sourceTree = "<group>"; };
 		84900E831D4DEB880056D174 /* CalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
-		84ACCB441D517E570062823F /* favoriteGroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = favoriteGroupCell.swift; sourceTree = "<group>"; };
-		84ACCB451D517E580062823F /* favoriteGroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = favoriteGroupCell.xib; sourceTree = "<group>"; };
 		84CD6B511D459E6500696DE7 /* MHSLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHSLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CD6B541D459E6800696DE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84CD6B561D459E6800696DE7 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -180,8 +172,6 @@
 			children = (
 				8451292C1D4EB101000DD6CC /* GroupCell.swift */,
 				8451292D1D4EB101000DD6CC /* GroupCell.xib */,
-				84ACCB441D517E570062823F /* favoriteGroupCell.swift */,
-				84ACCB451D517E580062823F /* favoriteGroupCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -381,7 +371,6 @@
 				8426400F1D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */,
 				84CD6B621D459E6800696DE7 /* LaunchScreen.storyboard in Resources */,
 				84CD6B861D45A10800696DE7 /* GoogleService-Info.plist in Resources */,
-				84ACCB491D517E590062823F /* favoriteGroupCell.xib in Resources */,
 				84CD6B5F1D459E6800696DE7 /* Assets.xcassets in Resources */,
 				84CD6B5A1D459E6800696DE7 /* Main.storyboard in Resources */,
 				845129311D4EB101000DD6CC /* GroupCell.xib in Resources */,
@@ -396,7 +385,6 @@
 				842640101D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */,
 				845129321D4EB101000DD6CC /* GroupCell.xib in Resources */,
 				8426400C1D4AD06300DDBAD8 /* Sketch College.ttf in Resources */,
-				84ACCB4A1D517E590062823F /* favoriteGroupCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +395,6 @@
 				842640111D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */,
 				845129331D4EB101000DD6CC /* GroupCell.xib in Resources */,
 				8426400D1D4AD06300DDBAD8 /* Sketch College.ttf in Resources */,
-				84ACCB4B1D517E590062823F /* favoriteGroupCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +464,6 @@
 				842640041D49E85200DDBAD8 /* UserModel.swift in Sources */,
 				8451293A1D4F08DE000DD6CC /* FavoriteControl.swift in Sources */,
 				842640001D49E6E400DDBAD8 /* HomeController.swift in Sources */,
-				84ACCB461D517E580062823F /* favoriteGroupCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,7 +476,6 @@
 				84CD6B6D1D459E6900696DE7 /* MHSLifeTests.swift in Sources */,
 				84900E851D4DEB880056D174 /* CalendarController.swift in Sources */,
 				842640051D49E85200DDBAD8 /* UserModel.swift in Sources */,
-				84ACCB471D517E580062823F /* favoriteGroupCell.swift in Sources */,
 				842640011D49E6E400DDBAD8 /* HomeController.swift in Sources */,
 				845129251D4EA709000DD6CC /* GroupSearchController.swift in Sources */,
 				8451292F1D4EB101000DD6CC /* GroupCell.swift in Sources */,
@@ -507,7 +492,6 @@
 				84CD6B781D459E6900696DE7 /* MHSLifeUITests.swift in Sources */,
 				84900E861D4DEB880056D174 /* CalendarController.swift in Sources */,
 				842640061D49E85200DDBAD8 /* UserModel.swift in Sources */,
-				84ACCB481D517E590062823F /* favoriteGroupCell.swift in Sources */,
 				842640021D49E6E400DDBAD8 /* HomeController.swift in Sources */,
 				845129261D4EA709000DD6CC /* GroupSearchController.swift in Sources */,
 				845129301D4EB101000DD6CC /* GroupCell.swift in Sources */,

@@ -297,22 +297,6 @@
                     <view key="view" contentMode="scaleToFill" id="HvC-rD-nTa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gxe-Xs-87A" customClass="CVCalendarMenuView" customModule="CVCalendar">
-                                <rect key="frame" x="0.0" y="20" width="600" height="33"/>
-                                <color key="backgroundColor" red="0.094361059367656708" green="0.50242996215820312" blue="0.091644398868083954" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <outlet property="menuViewDelegate" destination="HvC-rD-nTa" id="UJP-xf-CCc"/>
-                                </connections>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wqR-3L-6Yg" customClass="CVCalendarView" customModule="CVCalendar">
-                                <rect key="frame" x="0.0" y="61" width="600" height="369"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outlet property="calendarDelegate" destination="HvC-rD-nTa" id="h70-dA-UkF"/>
-                                </connections>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" image="Calendar 35" selectedImage="Calendar Filled-35" id="u2r-9k-wgj">
@@ -323,10 +307,6 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
-                    <connections>
-                        <outlet property="calendarView" destination="wqR-3L-6Yg" id="zcr-yE-uTi"/>
-                        <outlet property="menuView" destination="gxe-Xs-87A" id="p3q-OI-fvJ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDj-do-Tfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

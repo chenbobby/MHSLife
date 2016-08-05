@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CVCalendar.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-MHSLife.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4B752316A37942191898272E297186B4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BA14B622689766F6B8A4F42FD9DE552F</key>
+		<key>2930F4D5B0A6E857E1B1351B19DEF1F7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

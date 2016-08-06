@@ -2,18 +2,22 @@
 # platform :ios, '9.0'
 
 target 'MHSLife' do
-  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+
 use_frameworks!
 
-  # Firebase
-pod ‘Firebase’
-pod ‘Firebase/Database’
-pod ‘Firebase/Messaging’
-pod ‘Firebase/Core’
-pod ‘Firebase/Auth’
-pod ‘GoogleSignIn’
-pod ‘Fabric’
-pod ‘TwitterKit’
-pod ‘JTAppleCalendar’
+#Firebase
+pod 'Firebase'
+pod 'Firebase/Database'
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Messaging'
+
+#3rd Party API
+pod 'GoogleSignIn'
+pod 'Fabric'
+pod 'TwitterKit'
+
+#Calendar
+pod 'FSCalendar'
 
 end

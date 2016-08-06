@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="KGDefyingGravity.ttf">
@@ -286,7 +287,7 @@
             </objects>
             <point key="canvasLocation" x="2475" y="-240"/>
         </scene>
-        <!--Calendar Controller-->
+        <!--Data Source-->
         <scene sceneID="wDt-9f-2fL">
             <objects>
                 <viewController id="oUb-S8-NRd" customClass="CalendarController" customModule="MHSLife" customModuleProvider="target" sceneMemberID="viewController">
@@ -295,114 +296,53 @@
                         <viewControllerLayoutGuide type="bottom" id="g51-jq-o6n"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HvC-rD-nTa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8BU-n8-fq6">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem image="Back-25" id="lsN-Oz-iHZ">
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <action selector="previous:" destination="oUb-S8-NRd" id="Nxv-JV-3gT"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6tg-MU-Ycr"/>
-                                    <barButtonItem image="Forward-25" id="gb6-vx-GW2">
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <action selector="next:" destination="oUb-S8-NRd" id="bWx-Fe-4kS"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                                <color key="barTintColor" red="0.33333333333333331" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </toolbar>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kog-YS-aw4">
-                                <rect key="frame" x="0.0" y="64" width="600" height="20"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeG-df-1Ff">
-                                        <rect key="frame" x="0.0" y="0.0" width="86" height="20"/>
-                                        <color key="backgroundColor" red="1" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="0.33333333329999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fc-l8-dFB">
-                                        <rect key="frame" x="86" y="0.0" width="85" height="20"/>
-                                        <color key="backgroundColor" red="1" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="0.33333333329999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNa-8z-RMU">
-                                        <rect key="frame" x="171" y="0.0" width="86" height="20"/>
-                                        <color key="backgroundColor" red="1" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="0.33333333329999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7m5-2G-jnG">
-                                        <rect key="frame" x="257" y="0.0" width="86" height="20"/>
-                                        <color key="backgroundColor" red="1" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="0.33333333329999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="thu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqT-m0-5cJ">
-                                        <rect key="frame" x="343" y="0.0" width="86" height="20"/>
-                                        <color key="backgroundColor" red="1" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="0.33333333329999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZ0-9W-cG2">
-                                        <rect key="frame" x="429" y="0.0" width="85" height="20"/>
-                                        <color key="backgroundColor" red="1" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="0.33333333329999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IuH-OB-CmS">
-                                        <rect key="frame" x="514" y="0.0" width="86" height="20"/>
-                                        <color key="backgroundColor" red="1" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="0.33333333329999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1J-hf-3IP">
-                                <rect key="frame" x="256" y="31" width="88" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Eci-qk-YfM">
-                                <rect key="frame" x="0.0" y="84" width="600" height="315"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="02p-UO-GD5" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="315"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="315" id="vkk-Vr-VS8"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mqs-Jp-Fco" customClass="FSCalendar">
+                                <rect key="frame" x="-4" y="20" width="328" height="337"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                        <color key="value" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="eventColor">
+                                        <color key="value" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="weekdayTextSize">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="focusOnSingleSelectedDate" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="headerMinimumDissolvedAlpha">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="oUb-S8-NRd" id="Tfd-XX-2TY"/>
+                                    <outlet property="delegate" destination="oUb-S8-NRd" id="fjQ-ii-DX5"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Eci-qk-YfM" firstAttribute="top" secondItem="kog-YS-aw4" secondAttribute="bottom" id="09e-7g-NX7"/>
-                            <constraint firstItem="kog-YS-aw4" firstAttribute="leading" secondItem="HvC-rD-nTa" secondAttribute="leadingMargin" constant="-20" id="1LT-GV-ygI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="02p-UO-GD5" secondAttribute="trailing" constant="-20" id="6hN-nX-uKQ"/>
-                            <constraint firstItem="kog-YS-aw4" firstAttribute="top" secondItem="8BU-n8-fq6" secondAttribute="bottom" id="Ekf-o3-HUJ"/>
-                            <constraint firstItem="02p-UO-GD5" firstAttribute="leading" secondItem="HvC-rD-nTa" secondAttribute="leadingMargin" constant="-20" id="Fgm-iR-2Fg"/>
-                            <constraint firstItem="s1J-hf-3IP" firstAttribute="centerX" secondItem="8BU-n8-fq6" secondAttribute="centerX" id="OLG-4u-0zZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kog-YS-aw4" secondAttribute="trailing" constant="-20" id="QGI-qU-rdb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8BU-n8-fq6" secondAttribute="trailing" constant="-20" id="aWR-j5-8xM"/>
-                            <constraint firstItem="8BU-n8-fq6" firstAttribute="top" secondItem="Ebk-nh-GSb" secondAttribute="bottom" id="oRU-6P-NVq"/>
-                            <constraint firstItem="s1J-hf-3IP" firstAttribute="centerY" secondItem="8BU-n8-fq6" secondAttribute="centerY" id="vOY-8r-SmD"/>
-                            <constraint firstItem="8BU-n8-fq6" firstAttribute="leading" secondItem="HvC-rD-nTa" secondAttribute="leadingMargin" constant="-20" id="xfe-5P-3cD"/>
+                            <constraint firstItem="Mqs-Jp-Fco" firstAttribute="top" secondItem="Ebk-nh-GSb" secondAttribute="bottom" id="5ef-Zb-GbN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mqs-Jp-Fco" secondAttribute="trailing" constant="-20" id="98c-FL-Msh"/>
+                            <constraint firstItem="Mqs-Jp-Fco" firstAttribute="leading" secondItem="HvC-rD-nTa" secondAttribute="leadingMargin" constant="-20" id="VIj-Qu-I0m"/>
+                            <constraint firstItem="Mqs-Jp-Fco" firstAttribute="height" secondItem="HvC-rD-nTa" secondAttribute="height" multiplier="0.65" id="aqJ-yI-wok"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" image="Calendar 35" selectedImage="Calendar Filled-35" id="u2r-9k-wgj">
@@ -413,10 +353,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
-                    <connections>
-                        <outlet property="calendarView" destination="02p-UO-GD5" id="X9E-cm-avp"/>
-                        <outlet property="monthYearLabel" destination="s1J-hf-3IP" id="dBx-oX-h94"/>
-                    </connections>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDj-do-Tfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -621,10 +558,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Back-25" width="25" height="25"/>
         <image name="Calendar 35" width="35" height="35"/>
         <image name="Calendar Filled-35" width="35" height="35"/>
-        <image name="Forward-25" width="25" height="25"/>
         <image name="Star Filled-35" width="35" height="35"/>
         <image name="Star-35" width="35" height="35"/>
         <image name="loginBG" width="640" height="1136"/>

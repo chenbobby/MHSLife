@@ -3,7 +3,7 @@
 
 target 'MHSLife' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
+use_frameworks!
 
   # Firebase
 pod ‘Firebase’
@@ -14,5 +14,6 @@ pod ‘Firebase/Auth’
 pod ‘GoogleSignIn’
 pod ‘Fabric’
 pod ‘TwitterKit’
+pod ‘JTAppleCalendar’
 
 end

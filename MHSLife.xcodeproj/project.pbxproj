@@ -23,6 +23,12 @@
 		8426400F1D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */; };
 		842640101D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */; };
 		842640111D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */; };
+		8426B1DF1D5562C500D2EF7F /* DayCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8426B1DE1D5562C500D2EF7F /* DayCellView.xib */; };
+		8426B1E01D5562C500D2EF7F /* DayCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8426B1DE1D5562C500D2EF7F /* DayCellView.xib */; };
+		8426B1E11D5562C500D2EF7F /* DayCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8426B1DE1D5562C500D2EF7F /* DayCellView.xib */; };
+		8426B1E31D55632F00D2EF7F /* DayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B1E21D55632F00D2EF7F /* DayCellView.swift */; };
+		8426B1E41D55632F00D2EF7F /* DayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B1E21D55632F00D2EF7F /* DayCellView.swift */; };
+		8426B1E51D55632F00D2EF7F /* DayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B1E21D55632F00D2EF7F /* DayCellView.swift */; };
 		845129241D4EA709000DD6CC /* GroupSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845129231D4EA709000DD6CC /* GroupSearchController.swift */; };
 		845129251D4EA709000DD6CC /* GroupSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845129231D4EA709000DD6CC /* GroupSearchController.swift */; };
 		845129261D4EA709000DD6CC /* GroupSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845129231D4EA709000DD6CC /* GroupSearchController.swift */; };
@@ -78,6 +84,8 @@
 		842640031D49E85200DDBAD8 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8426400A1D4AD06300DDBAD8 /* Sketch College.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sketch College.ttf"; sourceTree = "<group>"; };
 		8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KGDefyingGravity.ttf; sourceTree = "<group>"; };
+		8426B1DE1D5562C500D2EF7F /* DayCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayCellView.xib; sourceTree = "<group>"; };
+		8426B1E21D55632F00D2EF7F /* DayCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCellView.swift; sourceTree = "<group>"; };
 		845129231D4EA709000DD6CC /* GroupSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupSearchController.swift; sourceTree = "<group>"; };
 		845129271D4EA765000DD6CC /* GroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
 		8451292C1D4EB101000DD6CC /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
@@ -172,6 +180,8 @@
 			children = (
 				8451292C1D4EB101000DD6CC /* GroupCell.swift */,
 				8451292D1D4EB101000DD6CC /* GroupCell.xib */,
+				8426B1DE1D5562C500D2EF7F /* DayCellView.xib */,
+				8426B1E21D55632F00D2EF7F /* DayCellView.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -369,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8426400F1D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */,
+				8426B1DF1D5562C500D2EF7F /* DayCellView.xib in Resources */,
 				84CD6B621D459E6800696DE7 /* LaunchScreen.storyboard in Resources */,
 				84CD6B861D45A10800696DE7 /* GoogleService-Info.plist in Resources */,
 				84CD6B5F1D459E6800696DE7 /* Assets.xcassets in Resources */,
@@ -383,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				842640101D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */,
+				8426B1E01D5562C500D2EF7F /* DayCellView.xib in Resources */,
 				845129321D4EB101000DD6CC /* GroupCell.xib in Resources */,
 				8426400C1D4AD06300DDBAD8 /* Sketch College.ttf in Resources */,
 			);
@@ -393,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				842640111D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */,
+				8426B1E11D5562C500D2EF7F /* DayCellView.xib in Resources */,
 				845129331D4EB101000DD6CC /* GroupCell.xib in Resources */,
 				8426400D1D4AD06300DDBAD8 /* Sketch College.ttf in Resources */,
 			);
@@ -458,6 +471,7 @@
 				845129281D4EA765000DD6CC /* GroupModel.swift in Sources */,
 				84CD6B5D1D459E6800696DE7 /* MHSLife.xcdatamodeld in Sources */,
 				84900E841D4DEB880056D174 /* CalendarController.swift in Sources */,
+				8426B1E31D55632F00D2EF7F /* DayCellView.swift in Sources */,
 				8451292E1D4EB101000DD6CC /* GroupCell.swift in Sources */,
 				84CD6B551D459E6800696DE7 /* AppDelegate.swift in Sources */,
 				845129241D4EA709000DD6CC /* GroupSearchController.swift in Sources */,
@@ -476,6 +490,7 @@
 				84CD6B6D1D459E6900696DE7 /* MHSLifeTests.swift in Sources */,
 				84900E851D4DEB880056D174 /* CalendarController.swift in Sources */,
 				842640051D49E85200DDBAD8 /* UserModel.swift in Sources */,
+				8426B1E41D55632F00D2EF7F /* DayCellView.swift in Sources */,
 				842640011D49E6E400DDBAD8 /* HomeController.swift in Sources */,
 				845129251D4EA709000DD6CC /* GroupSearchController.swift in Sources */,
 				8451292F1D4EB101000DD6CC /* GroupCell.swift in Sources */,
@@ -492,6 +507,7 @@
 				84CD6B781D459E6900696DE7 /* MHSLifeUITests.swift in Sources */,
 				84900E861D4DEB880056D174 /* CalendarController.swift in Sources */,
 				842640061D49E85200DDBAD8 /* UserModel.swift in Sources */,
+				8426B1E51D55632F00D2EF7F /* DayCellView.swift in Sources */,
 				842640021D49E6E400DDBAD8 /* HomeController.swift in Sources */,
 				845129261D4EA709000DD6CC /* GroupSearchController.swift in Sources */,
 				845129301D4EB101000DD6CC /* GroupCell.swift in Sources */,

@@ -13,6 +13,7 @@ import FirebaseDatabase
 struct User{
     static var UID: String = ""
     static var favorites: [String] = []
+    static var favoriteEvents: [Event] = []
     
     static func toggleSubscription(groupName: String) {
         let ref = FIRDatabase.database().reference()
@@ -51,8 +52,8 @@ struct User{
         return User.favorites.contains(groupName)
     }
     
-    static func removeDefault(favorites: [String]) -> [String] {
-        var modifiedFavorites = favorites
+    static func removeDefault() -> [String] {
+        var modifiedFavorites = User.favorites
         if let index = modifiedFavorites.indexOf("mcclintock") {
             modifiedFavorites.removeAtIndex(index)
         }

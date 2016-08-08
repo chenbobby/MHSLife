@@ -23,6 +23,25 @@
 		8426400F1D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */; };
 		842640101D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */; };
 		842640111D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */; };
+		8426B1F31D569BE800D2EF7F /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B1F21D569BE800D2EF7F /* EventModel.swift */; };
+		8426B1F91D571A0900D2EF7F /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B1F81D571A0900D2EF7F /* EventController.swift */; };
+		8426B1FA1D571A0900D2EF7F /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B1F81D571A0900D2EF7F /* EventController.swift */; };
+		8426B1FB1D571A0900D2EF7F /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B1F81D571A0900D2EF7F /* EventController.swift */; };
+		8426B1FD1D57C70500D2EF7F /* Rounded_Elegance.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426B1FC1D57C70500D2EF7F /* Rounded_Elegance.ttf */; };
+		8426B1FE1D57C70500D2EF7F /* Rounded_Elegance.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426B1FC1D57C70500D2EF7F /* Rounded_Elegance.ttf */; };
+		8426B1FF1D57C70500D2EF7F /* Rounded_Elegance.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426B1FC1D57C70500D2EF7F /* Rounded_Elegance.ttf */; };
+		8426B2011D57C71F00D2EF7F /* Biko_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8426B2001D57C71F00D2EF7F /* Biko_Regular.otf */; };
+		8426B2021D57C71F00D2EF7F /* Biko_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8426B2001D57C71F00D2EF7F /* Biko_Regular.otf */; };
+		8426B2031D57C71F00D2EF7F /* Biko_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8426B2001D57C71F00D2EF7F /* Biko_Regular.otf */; };
+		8426B20D1D57CCBD00D2EF7F /* KGMissKindyChunky.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426B20C1D57CCBD00D2EF7F /* KGMissKindyChunky.ttf */; };
+		8426B20E1D57CCBD00D2EF7F /* KGMissKindyChunky.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426B20C1D57CCBD00D2EF7F /* KGMissKindyChunky.ttf */; };
+		8426B20F1D57CCBD00D2EF7F /* KGMissKindyChunky.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8426B20C1D57CCBD00D2EF7F /* KGMissKindyChunky.ttf */; };
+		8426B2111D57DD2C00D2EF7F /* CreditsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B2101D57DD2C00D2EF7F /* CreditsController.swift */; };
+		8426B2121D57DD2C00D2EF7F /* CreditsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B2101D57DD2C00D2EF7F /* CreditsController.swift */; };
+		8426B2131D57DD2C00D2EF7F /* CreditsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426B2101D57DD2C00D2EF7F /* CreditsController.swift */; };
+		8426B2151D57E21400D2EF7F /* The_Juke_Box-FFP.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8426B2141D57E21400D2EF7F /* The_Juke_Box-FFP.otf */; };
+		8426B2161D57E21400D2EF7F /* The_Juke_Box-FFP.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8426B2141D57E21400D2EF7F /* The_Juke_Box-FFP.otf */; };
+		8426B2171D57E21400D2EF7F /* The_Juke_Box-FFP.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8426B2141D57E21400D2EF7F /* The_Juke_Box-FFP.otf */; };
 		845129241D4EA709000DD6CC /* GroupSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845129231D4EA709000DD6CC /* GroupSearchController.swift */; };
 		845129251D4EA709000DD6CC /* GroupSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845129231D4EA709000DD6CC /* GroupSearchController.swift */; };
 		845129261D4EA709000DD6CC /* GroupSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845129231D4EA709000DD6CC /* GroupSearchController.swift */; };
@@ -78,6 +97,13 @@
 		842640031D49E85200DDBAD8 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8426400A1D4AD06300DDBAD8 /* Sketch College.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sketch College.ttf"; sourceTree = "<group>"; };
 		8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KGDefyingGravity.ttf; sourceTree = "<group>"; };
+		8426B1F21D569BE800D2EF7F /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		8426B1F81D571A0900D2EF7F /* EventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventController.swift; sourceTree = "<group>"; };
+		8426B1FC1D57C70500D2EF7F /* Rounded_Elegance.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rounded_Elegance.ttf; sourceTree = "<group>"; };
+		8426B2001D57C71F00D2EF7F /* Biko_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Biko_Regular.otf; sourceTree = "<group>"; };
+		8426B20C1D57CCBD00D2EF7F /* KGMissKindyChunky.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KGMissKindyChunky.ttf; sourceTree = "<group>"; };
+		8426B2101D57DD2C00D2EF7F /* CreditsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditsController.swift; sourceTree = "<group>"; };
+		8426B2141D57E21400D2EF7F /* The_Juke_Box-FFP.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The_Juke_Box-FFP.otf"; sourceTree = "<group>"; };
 		845129231D4EA709000DD6CC /* GroupSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupSearchController.swift; sourceTree = "<group>"; };
 		845129271D4EA765000DD6CC /* GroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
 		8451292C1D4EB101000DD6CC /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
@@ -142,6 +168,7 @@
 			children = (
 				842640031D49E85200DDBAD8 /* UserModel.swift */,
 				845129271D4EA765000DD6CC /* GroupModel.swift */,
+				8426B1F21D569BE800D2EF7F /* EventModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -154,6 +181,8 @@
 				84263FFF1D49E6E400DDBAD8 /* HomeController.swift */,
 				84900E831D4DEB880056D174 /* CalendarController.swift */,
 				845129231D4EA709000DD6CC /* GroupSearchController.swift */,
+				8426B1F81D571A0900D2EF7F /* EventController.swift */,
+				8426B2101D57DD2C00D2EF7F /* CreditsController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -163,6 +192,10 @@
 			children = (
 				8426400E1D4AE19200DDBAD8 /* KGDefyingGravity.ttf */,
 				8426400A1D4AD06300DDBAD8 /* Sketch College.ttf */,
+				8426B1FC1D57C70500D2EF7F /* Rounded_Elegance.ttf */,
+				8426B2001D57C71F00D2EF7F /* Biko_Regular.otf */,
+				8426B20C1D57CCBD00D2EF7F /* KGMissKindyChunky.ttf */,
+				8426B2141D57E21400D2EF7F /* The_Juke_Box-FFP.otf */,
 			);
 			name = fonts;
 			sourceTree = "<group>";
@@ -369,9 +402,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8426400F1D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */,
+				8426B2151D57E21400D2EF7F /* The_Juke_Box-FFP.otf in Resources */,
 				84CD6B621D459E6800696DE7 /* LaunchScreen.storyboard in Resources */,
 				84CD6B861D45A10800696DE7 /* GoogleService-Info.plist in Resources */,
+				8426B2011D57C71F00D2EF7F /* Biko_Regular.otf in Resources */,
 				84CD6B5F1D459E6800696DE7 /* Assets.xcassets in Resources */,
+				8426B1FD1D57C70500D2EF7F /* Rounded_Elegance.ttf in Resources */,
+				8426B20D1D57CCBD00D2EF7F /* KGMissKindyChunky.ttf in Resources */,
 				84CD6B5A1D459E6800696DE7 /* Main.storyboard in Resources */,
 				845129311D4EB101000DD6CC /* GroupCell.xib in Resources */,
 				8426400B1D4AD06300DDBAD8 /* Sketch College.ttf in Resources */,
@@ -382,9 +419,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8426B1FE1D57C70500D2EF7F /* Rounded_Elegance.ttf in Resources */,
 				842640101D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */,
+				8426B2021D57C71F00D2EF7F /* Biko_Regular.otf in Resources */,
 				845129321D4EB101000DD6CC /* GroupCell.xib in Resources */,
+				8426B20E1D57CCBD00D2EF7F /* KGMissKindyChunky.ttf in Resources */,
 				8426400C1D4AD06300DDBAD8 /* Sketch College.ttf in Resources */,
+				8426B2161D57E21400D2EF7F /* The_Juke_Box-FFP.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,9 +433,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8426B1FF1D57C70500D2EF7F /* Rounded_Elegance.ttf in Resources */,
 				842640111D4AE19200DDBAD8 /* KGDefyingGravity.ttf in Resources */,
+				8426B2031D57C71F00D2EF7F /* Biko_Regular.otf in Resources */,
 				845129331D4EB101000DD6CC /* GroupCell.xib in Resources */,
+				8426B20F1D57CCBD00D2EF7F /* KGMissKindyChunky.ttf in Resources */,
 				8426400D1D4AD06300DDBAD8 /* Sketch College.ttf in Resources */,
+				8426B2171D57E21400D2EF7F /* The_Juke_Box-FFP.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,12 +502,15 @@
 				84CD6B571D459E6800696DE7 /* LoginController.swift in Sources */,
 				845129281D4EA765000DD6CC /* GroupModel.swift in Sources */,
 				84CD6B5D1D459E6800696DE7 /* MHSLife.xcdatamodeld in Sources */,
+				8426B1F91D571A0900D2EF7F /* EventController.swift in Sources */,
 				84900E841D4DEB880056D174 /* CalendarController.swift in Sources */,
 				8451292E1D4EB101000DD6CC /* GroupCell.swift in Sources */,
 				84CD6B551D459E6800696DE7 /* AppDelegate.swift in Sources */,
+				8426B2111D57DD2C00D2EF7F /* CreditsController.swift in Sources */,
 				845129241D4EA709000DD6CC /* GroupSearchController.swift in Sources */,
 				842640041D49E85200DDBAD8 /* UserModel.swift in Sources */,
 				8451293A1D4F08DE000DD6CC /* FavoriteControl.swift in Sources */,
+				8426B1F31D569BE800D2EF7F /* EventModel.swift in Sources */,
 				842640001D49E6E400DDBAD8 /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,7 +521,9 @@
 			files = (
 				84263FFD1D4885DC00DDBAD8 /* RegisterController.swift in Sources */,
 				845129291D4EA765000DD6CC /* GroupModel.swift in Sources */,
+				8426B1FA1D571A0900D2EF7F /* EventController.swift in Sources */,
 				84CD6B6D1D459E6900696DE7 /* MHSLifeTests.swift in Sources */,
+				8426B2121D57DD2C00D2EF7F /* CreditsController.swift in Sources */,
 				84900E851D4DEB880056D174 /* CalendarController.swift in Sources */,
 				842640051D49E85200DDBAD8 /* UserModel.swift in Sources */,
 				842640011D49E6E400DDBAD8 /* HomeController.swift in Sources */,
@@ -489,7 +539,9 @@
 			files = (
 				84263FFE1D4885DC00DDBAD8 /* RegisterController.swift in Sources */,
 				8451292A1D4EA765000DD6CC /* GroupModel.swift in Sources */,
+				8426B1FB1D571A0900D2EF7F /* EventController.swift in Sources */,
 				84CD6B781D459E6900696DE7 /* MHSLifeUITests.swift in Sources */,
+				8426B2131D57DD2C00D2EF7F /* CreditsController.swift in Sources */,
 				84900E861D4DEB880056D174 /* CalendarController.swift in Sources */,
 				842640061D49E85200DDBAD8 /* UserModel.swift in Sources */,
 				842640021D49E6E400DDBAD8 /* HomeController.swift in Sources */,
@@ -622,6 +674,7 @@
 			baseConfigurationReference = 2509E68B183C90AB41EBFEB7 /* Pods-MHSLife.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = MHSLife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bobchen.MHSLife;
@@ -634,6 +687,7 @@
 			baseConfigurationReference = 546229BD17D92126D34F6C65 /* Pods-MHSLife.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = MHSLife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bobchen.MHSLife;

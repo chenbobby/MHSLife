@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import FirebaseAuth
+import SVProgressHUD
 
 class RegisterController: UIViewController {
     
@@ -18,7 +19,6 @@ class RegisterController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil);
     }
     @IBOutlet weak var errorLabel: UILabel!
-    @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var newPasswordField: UITextField!
     @IBOutlet weak var confirmPasswordField: UITextField!
@@ -29,28 +29,32 @@ class RegisterController: UIViewController {
         if(error != ""){
             errorLabel.text = error
         }else{
-            errorLabel.text = "Creating Account..."
+            SVProgressHUD.showWithStatus("Creating Account...")
             FIRAuth.auth()?.createUserWithEmail(emailField.text!, password: newPasswordField.text!, completion: {
                 (user, error) in
             
                 if error != nil {
                     print(error!.localizedDescription)
+                    SVProgressHUD.showErrorWithStatus("Failed to Connect")
+                    return
                 } else {
-                    print("User created...")
-                    let newUser : [String : AnyObject] = ["name" : self.nameField.text!, "favorites" : []]
+                    let newUser : [String : AnyObject] = ["favorites" : []]
                     let ref = FIRDatabase.database().reference()
                     ref.child("users").child(user!.uid).setValue(newUser)
+                    SVProgressHUD.showSuccessWithStatus("Account Created")
+                    
+                    self.errorLabel.text = ""
+                    self.emailField.text = ""
+                    self.newPasswordField.text = ""
+                    self.confirmPasswordField.text = ""
                 
-                    self.navigationController?.popViewControllerAnimated(true)
+                    self.dismissViewControllerAnimated(true, completion: nil)
                 }
             })
         }
     }
     
     func validate() -> String {
-        if(nameField.text == ""){
-            return "Please Enter Name"
-        }
         if(emailField.text == ""){
             return "Please Enter Email"
         }

@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import SVProgressHUD
 
 class GroupSearchController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -28,21 +29,24 @@ class GroupSearchController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        SVProgressHUD.showWithStatus("Loading Groups")
+        
         let ref = FIRDatabase.database().reference()
-        ref.child("groups/").observeEventType(.Value, withBlock: {
+        ref.child("groups/").queryOrderedByKey().observeSingleEventOfType(.Value, withBlock: {
             snapshot in
             
             if(!snapshot.exists()){
-                print("No Groups Exists")
+                print("No Groups Exist")
+                SVProgressHUD.showErrorWithStatus("No Groups")
+                return
             }else{
-                print("Loading Groups")
                 let dataDict = snapshot.value as? [String : [String : AnyObject]]
-                print(dataDict)
                 for (group, info) in dataDict! {
                     self.groups.append(Group(name: group, description: info["description"] as! String))
                 }
             }
             self.tableView.reloadData()
+            SVProgressHUD.dismiss()
         })
         
         searchController.searchResultsUpdater  = self

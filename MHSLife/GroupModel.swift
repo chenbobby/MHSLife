@@ -9,6 +9,6 @@
 import Foundation
 
 struct Group {
-    var name : String
+    var name: String
     var description : String
 }

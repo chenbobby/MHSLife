@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 import GoogleSignIn
 import TwitterKit
+import SVProgressHUD
 
 class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
     
@@ -43,17 +44,28 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
     
     // MARK: - Email/Password
     @IBAction func loginButton(sender: AnyObject) {
+        SVProgressHUD.show()
+        
         FIRAuth.auth()?.signInWithEmail(emailField.text!, password: passwordField.text!, completion: {
             (user, error) in
             
             if(error != nil){
+                SVProgressHUD.showErrorWithStatus("Failed to Connect")
                 print(error!.localizedDescription)
+                if self.emailField.text == "" {
+                    self.loadAlert("Email")
+                } else if self.passwordField.text == "" {
+                    self.loadAlert("Password")
+                } else {
+                    self.loadAlert("Other")
+                }
                 self.passwordField.text = ""
                 return
             }
             
             User.UID = user!.uid
-            print("User logged in with Email: " + User.UID)
+            
+            SVProgressHUD.dismiss()
             
             self.performSegueWithIdentifier("login", sender: nil)
         })
@@ -61,8 +73,11 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
     
     // MARK: - Google
     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError!) {
+        SVProgressHUD.show()
+        
         if let error = error {
             print(error.localizedDescription)
+            SVProgressHUD.showErrorWithStatus("Failed to Connect")
             return
         }
         
@@ -73,12 +88,14 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
             (user, error) in
             
             if(error != nil){
+                SVProgressHUD.showErrorWithStatus("Failed to Connect")
                 print(error?.localizedDescription)
                 return
             }
             
             User.UID = user!.uid
-            print("User logged in with Google: " + User.UID)
+            
+            SVProgressHUD.dismiss()
             
             self.performSegueWithIdentifier("login", sender: nil)
         })
@@ -98,6 +115,8 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
         self.twitterButton.logInCompletion = {
             (session, error) in
             
+            SVProgressHUD.show()
+            
             if(session != nil){
                 let authToken = session?.authToken
                 let authTokenSecret = session?.authTokenSecret
@@ -112,11 +131,13 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
                     }
                     
                     User.UID = user!.uid
-                    print("User logged in with Twitter: " + User.UID)
+                    
+                    SVProgressHUD.dismiss()
                     
                     self.performSegueWithIdentifier("login", sender: nil)
                 })
             }else{
+                SVProgressHUD.showErrorWithStatus("Failed to Connect...")
                 if(error != nil){
                     print(error!.localizedDescription)
                 }
@@ -124,13 +145,33 @@ class LoginController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate{
         }
     }
     
-    // MARK: - Hide Navbar
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBarHidden = true
+    // Alert
+    func loadAlert(error: String) {
+        var message: String
+        switch(error){
+        case "Email":
+            message = "Please Enter Email"
+        case "Password":
+            message = "Please Enter Password"
+        case "Other":
+            message = "Something's wrong with your input"
+        default:
+            message = "Unknown Login Error"
+        }
+        
+        let alert = UIAlertController(title: "Oops!", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Cancel, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.navigationBarHidden = false
+    
+    // Credits
+    @IBAction func showCredits(sender: UILongPressGestureRecognizer) {
+        if(sender.state == .Began){
+            let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CreditsPopUpID") as! CreditsController
+            self.addChildViewController(popOverVC)
+            popOverVC.view.frame = self.view.frame
+            self.view.addSubview(popOverVC.view)
+            popOverVC.didMoveToParentViewController(self)
+        }
     }
 }

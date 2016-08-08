@@ -8,8 +8,11 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import SVProgressHUD
 
-class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeController: UIViewController{
+    
+    var favorites: [String] = []
     
     @IBAction func logout(sender: AnyObject) {
         try! FIRAuth.auth()!.signOut()
@@ -28,42 +31,6 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         loadAccount()
         loadNews()
-    }
-    
-    // MARK: - Table View
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        var sections: Int = 0
-        if(User.favorites.count != 0){
-            self.tableView.separatorStyle = .SingleLine
-            sections = 1
-            self.tableView.backgroundView = nil
-        }else{
-            let noDataLabel: UILabel = UILabel(frame: CGRectMake(0, 0, self.tableView.bounds.size.width, self.tableView.bounds.size.height))
-            noDataLabel.font = UIFont(name: "Avenir Next Condensed", size: 20)
-            noDataLabel.text = "Add Favorites for Event Notifications"
-            noDataLabel.textColor = UIColor.blackColor()
-            noDataLabel.textAlignment = .Center
-            self.tableView.backgroundView = noDataLabel
-            self.tableView.separatorStyle = .None
-        }
-        return sections
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return User.favorites.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-        
-        cell.textLabel!.text = User.favorites[indexPath.row]
-        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(self.unfavorite(_:)))
-        cell.addGestureRecognizer(longPressGestureRecognizer)
-        
-
-        
-        return cell
     }
     
     func unfavorite(sender: UILongPressGestureRecognizer) {
@@ -85,29 +52,28 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: - Load Data
     func loadAccount() {
+        SVProgressHUD.showWithStatus("Loading Account")
         let ref = FIRDatabase.database().reference()
         ref.child("users/" + User.UID).observeEventType(.Value, withBlock: {
             snapshot in
             
             if(!snapshot.exists()){
-                print("No Account Exists")
                 let newUser : [String : AnyObject] = ["mcclintock" : true]
                 let ref = FIRDatabase.database().reference()
                 ref.child("users").child(User.UID).setValue(newUser)
-                print("New Account Created")
                 FIRMessaging.messaging().subscribeToTopic("/topics/mcclintock")
                 self.loadAccount()
             }else{
-                print("Account Exists")
-                User.favorites = User.removeDefault(Array((snapshot.value as! [String : AnyObject]).keys))
-                print("Favorites: ")
-                print(User.favorites)
+                User.favorites = Array((snapshot.value as! [String : AnyObject]).keys)
+                self.favorites = User.removeDefault()
             }
             self.tableView.reloadData()
+            SVProgressHUD.dismiss()
         })
     }
     
     func loadNews() {
+        SVProgressHUD.showWithStatus("Loading News")
         let ref = FIRDatabase.database().reference()
         ref.child("news/").observeEventType(.Value, withBlock: {
             snapshot in
@@ -116,7 +82,43 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.headline1Label.text = dataDict!["headline1"] as? String
             self.headline2Label.text = dataDict!["headline2"] as? String
             self.headline3Label.text = dataDict!["headline3"] as? String
+            SVProgressHUD.dismiss()
         })
     }
 
+}
+
+extension HomeController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        var sections: Int = 0
+        if(self.favorites.count != 0){
+            self.tableView.separatorStyle = .SingleLine
+            sections = 1
+            self.tableView.backgroundView = nil
+        }else{
+            let noDataLabel: UILabel = UILabel(frame: CGRectMake(0, 0, self.tableView.bounds.size.width, self.tableView.bounds.size.height))
+            noDataLabel.font = UIFont(name: "KGMissKindyChunky", size: 18)
+            noDataLabel.text = "Oh-No! No Favorites!"
+            noDataLabel.textColor = UIColor.blackColor()
+            noDataLabel.textAlignment = .Center
+            self.tableView.backgroundView = noDataLabel
+            self.tableView.separatorStyle = .None
+        }
+        return sections
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.favorites.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        
+        cell.textLabel!.text = self.favorites[indexPath.row]
+        cell.textLabel!.font = UIFont(name: "KGMissKindyChunky", size: 18)
+        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(self.unfavorite(_:)))
+        cell.addGestureRecognizer(longPressGestureRecognizer)
+        
+        return cell
+    }
 }

@@ -20,4 +20,7 @@ pod 'TwitterKit'
 #Calendar
 pod 'FSCalendar'
 
+#Progress Indicator
+pod ‘SVProgressHUD’
+
 end

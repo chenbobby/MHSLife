@@ -5,6 +5,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="KGMissKindyChunky.ttf">
+            <string>KGMissKindyChunky</string>
+            <string>KGMissKindyChunky</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -16,19 +22,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTw-wY-Yxy">
-                        <rect key="frame" x="8" y="47" width="75" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <rect key="frame" x="8" y="53" width="95" height="22"/>
+                        <fontDescription key="fontDescription" name="KGMissKindyChunky" family="KG Miss Kindy Chunky" pointSize="16"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzh-XQ-yT3">
-                        <rect key="frame" x="8" y="10" width="124" height="27"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <rect key="frame" x="8" y="10" width="158" height="33"/>
+                        <fontDescription key="fontDescription" name="KGMissKindyChunky" family="KG Miss Kindy Chunky" pointSize="24"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ygS-X8-Oh7" customClass="FavoriteControl" customModule="MHSLife" customModuleProvider="target">
-                        <rect key="frame" x="287" y="13" width="25" height="25"/>
+                        <rect key="frame" x="287" y="14" width="25" height="25"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="JMK-Pu-JfA"/>
@@ -37,12 +43,12 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="ygS-X8-Oh7" firstAttribute="centerY" secondItem="fzh-XQ-yT3" secondAttribute="centerY" id="1AP-c9-hSB"/>
                     <constraint firstItem="ZTw-wY-Yxy" firstAttribute="top" secondItem="fzh-XQ-yT3" secondAttribute="bottom" constant="10" id="3Z8-l6-Jbc"/>
                     <constraint firstItem="ygS-X8-Oh7" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="BCu-yd-yy9"/>
                     <constraint firstItem="fzh-XQ-yT3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="Ujq-Uy-LiY"/>
                     <constraint firstAttribute="leadingMargin" secondItem="ZTw-wY-Yxy" secondAttribute="leading" id="chu-LO-tEN"/>
                     <constraint firstItem="fzh-XQ-yT3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="rsd-7l-qkQ"/>
-                    <constraint firstItem="ygS-X8-Oh7" firstAttribute="centerY" secondItem="fzh-XQ-yT3" secondAttribute="centerY" constant="2" id="ufF-ea-a5r"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
